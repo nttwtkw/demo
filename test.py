@@ -75,6 +75,7 @@ dag = DAG(
 t1 = BashOperator(
     task_id='print_date',
     bash_command='date',
+    queue = 'kubernetes',
     dag=dag,
 )
 
@@ -82,7 +83,6 @@ t2 = BashOperator(
     task_id='sleep',
     depends_on_past=False,
     bash_command='sleep 5',
-    queue = 'kubernetes',
     retries=3,
     dag=dag,
 )
@@ -113,6 +113,7 @@ t3 = BashOperator(
     task_id='templated',
     depends_on_past=False,
     bash_command=templated_command,
+    queue = 'kubernetes',
     params={'my_param': 'Parameter I passed in'},
     dag=dag,
 )
