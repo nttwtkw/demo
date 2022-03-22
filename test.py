@@ -64,7 +64,7 @@ default_args = {
 
 # [START instantiate_dag]
 dag = DAG(
-    'tutorial',
+    'tutorial2',
     default_args=default_args,
     description='A simple tutorial DAG',
 )
