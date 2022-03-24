@@ -80,8 +80,8 @@ dag = DAG(
 # [START basic_task]
 t1 = PythonOperator(
         task_id='hello_world',
-        python_callable=hello_world
-        # trigger_rule="all_done"
+        python_callable=hello_world,
+        dag=dag,
 )
 
 t2 = BashOperator(
