@@ -66,7 +66,7 @@ default_args = {
 # Create New function for hello_world
 
 def hello_world():
-    print('hello worldasfaslgjdhasjlkdjfasljdghjdaskjg;sdklfk;')
+    print('hello world 123 Chin')
 
 # [START instantiate_dag]
 dag = DAG(
