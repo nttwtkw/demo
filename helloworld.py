@@ -29,7 +29,8 @@ from datetime import timedelta
 # The DAG object; we'll need this to instantiate a DAG
 from airflow import DAG
 # Operators; we need this to operate!
-from airflow.operators.bash_operator import BashOperator,PythonOperator
+from airflow.operators.bash_operator import BashOperator
+from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
 
 # [END import_module]
